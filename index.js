@@ -25,7 +25,7 @@ const ForgotPasswordRequest = require("./model/ForgotPasswordRequests");
 const DownloadExpensesList = require("./model/DownloadedExpenseList");
 
 const app = express();
-
+app.use(express.static(path.join(__dirname, 'public')))
 const accessLogStream = fs.createWriteStream(
   path.join(__dirname, "access.log"),
   {
