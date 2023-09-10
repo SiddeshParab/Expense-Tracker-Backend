@@ -79,7 +79,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     downloadReport.addEventListener("click", async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/user/downloadexpensesreport",
+          "http://13.53.174.225:3000/user/downloadexpensesreport",
           {
             headers: { Authorization: token },
           }
