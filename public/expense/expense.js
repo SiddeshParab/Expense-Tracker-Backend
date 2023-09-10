@@ -54,7 +54,7 @@ if (performance.navigation.type === 2) {
   
     // POST request to backend
     axios
-      .post("http://localhost:3000/expense/add-expense", ExpenseObj, {
+      .post("http://13.53.174.225:3000/expense/add-expense", ExpenseObj, {
         headers: { Authorization: token },
       })
       .then((res) => {
@@ -339,7 +339,7 @@ if (performance.navigation.type === 2) {
   /* LEADERBOARD FEATURES START */
   function leaderBoardFeature() {
     axios
-      .get("http://localhost:3000/expense/lb-users-expenses", {
+      .get("http://13.53.174.225:3000/expense/lb-users-expenses", {
         headers: { Authorization: token },
       })
       .then((users) => {
@@ -400,7 +400,7 @@ if (performance.navigation.type === 2) {
     e.preventDefault();
   
     axios
-      .get("http://localhost:3000/order/premiummembership", {
+      .get("http://13.53.174.225:3000/order/premiummembership", {
         headers: { Authorization: token },
       })
       .then((res) => {
@@ -446,7 +446,7 @@ if (performance.navigation.type === 2) {
         rzp1.on("payment.failed", function (response) {
           axios
             .post(
-              "http://localhost:3000/order/updatetrnasectionstatus",
+              "http://13.53.174.225:3000/order/updatetrnasectionstatus",
               response,
               {
                 headers: { Authorization: token },
