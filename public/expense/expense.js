@@ -146,7 +146,7 @@ if (performance.navigation.type === 2) {
         else {
           axios
             .put(
-              `http://localhost:3000/expense/edit-expense/${ExpenseObj.id}`,
+              `http://13.53.174.225:3000/expense/edit-expense/${ExpenseObj.id}`,
               updatedExpense,
               {
                 headers: { Authorization: token },
@@ -194,7 +194,7 @@ if (performance.navigation.type === 2) {
     function deleteExpense() {
       // console.log(token);
       axios
-        .delete(`http://localhost:3000/expense/delete-expense/${ExpenseObj.id}`, {
+        .delete(`http://13.53.174.225:3000/expense/delete-expense/${ExpenseObj.id}`, {
           headers: { Authorization: token },
         })
         .then((deletedExpense) => {
@@ -224,7 +224,7 @@ if (performance.navigation.type === 2) {
   
     setTimeout(() => {
       axios
-        .get(`http://localhost:3000/expense?page=${page}&limit=${limit}`, {
+        .get(`http://13.53.174.225:3000/expense?page=${page}&limit=${limit}`, {
           headers: { Authorization: token },
         })
         .then(
@@ -416,7 +416,7 @@ if (performance.navigation.type === 2) {
             // Send the payment_id to your server for updating transaction status
             try {
               const response = await axios.post(
-                "http://localhost:3000/order/updatetrnasectionstatus",
+                "http://13.53.174.225:3000/order/updatetrnasectionstatus",
                 { order_id: options.order_id, payment_id: payment_id },
                 {
                   headers: { Authorization: token },
